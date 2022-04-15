@@ -16,16 +16,14 @@
 </head>
 
 <body>
-    <nav class="header__color navbar navbar-expand-lg">
+  <header class="mt-3">
+    <nav class="header__nav navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="{% static 'media/cherry.png' %}"/></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="collapse navbar-collapse header_right" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#"><img src="{% static 'media/buscar.png' %}"/></a>
+                <a class="nav-link" href="#"><img src="{% static 'media/search.png' %}"/></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"><img src="{% static 'media/heart.png' %}"/></a>
@@ -43,16 +41,32 @@
           </div>
         </div>
       </nav>
-    <main id="content">
+
+  </header>
+  <main id="content">
         <div id="box">
             {% block body %}
             
             {% endblock body %}
         </div>
-    </main>
-    <footer>
-        redes &copy; James Herrera - {% now "d/M/Y - h:m:s" %}
-    </footer>
+  </main>
+  <footer class="mb-3">
+    <nav class="footer__nav navbar navbar-expand-lg">
+      <div class="container-fluid footer__container">
+        <ul class="navbar-nav w-100 d-flex justify-content-around">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img src="{% static 'media/face.png' %}"/></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://api.whatsapp.com/send?phone=573208773192"><img src="{% static 'media/wpp.png' %}"/></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com/accesorioscherry.co/?hl=es-la"><img src="{% static 'media/insta.png' %}"/></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
